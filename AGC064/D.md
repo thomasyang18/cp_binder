@@ -49,5 +49,29 @@ But if there's a B (not N) at >= Y, then you can do shit.
 
 Think backwards? Perhaps we have any final ending configuration; move some subset of stones backwards s.t. it remains legit, how many ending configurations can end (reversed) in the starting configurations? 
 
-======
+---
+
+I don't think permutations matter at all lol. Like, the point is there's a lot of ways, right idk. 
+
+Maybe we should just try for small examples and see what the answer is at this point. 
+
+---
+
+Also, one "duh" statement: At every step $i$, every single cell $j > i$ has stones in it. 
+
+---
+
+If we look at stone $n$ and stone $n-1$, a simple observation is that stone $n$ must always come after stone $n-1$. 
+
+RB => RB
+BB => BB
+
+---
+RRB => {RRB}
+RBB => {RBB, BRB}
+BRB => {BRB, RBB}
+BBB => {BBB}
+
+---
+Gonna just keep writing brute forcers. 
 
